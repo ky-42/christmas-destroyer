@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2uv6ylkr37hp"]
+
+[ext_resource type="Script" path="res://anvil.gd" id="1_cxgkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5w1l"]
+
+[node name="Anvil" type="CharacterBody2D"]
+position = Vector2(243, 7)
+script = ExtResource("1_cxgkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l5w1l")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 10)
+target_position = Vector2(0, 1)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(-10, 10)
+target_position = Vector2(0, 1)
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+position = Vector2(10, 10)
+target_position = Vector2(0, 1)
