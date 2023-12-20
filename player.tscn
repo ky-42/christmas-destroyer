@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg044jbktjeg"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_7ixcf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmbxr"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_7ixcf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_vmbxr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
